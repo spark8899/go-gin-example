@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/astaxie/beego v1.12.3
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-gonic/gin v1.7.7
 	github.com/go-ini/ini v1.66.2
 	github.com/jinzhu/gorm v1.9.16
@@ -34,7 +35,7 @@ require (
 
 replace (
 	github.com/spark8899/go-gin-example/conf => ./conf
-	github.com/spark8899/go-gin-example/middleware => ./middleware
+	github.com/spark8899/go-gin-example/middleware/jwt => ./middleware/jwt
 	github.com/spark8899/go-gin-example/models => ./models
 	github.com/spark8899/go-gin-example/pkg/e => ./pkg/e
 	github.com/spark8899/go-gin-example/pkg/setting => ./pkg/setting

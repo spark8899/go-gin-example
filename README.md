@@ -88,3 +88,9 @@ curl -v -XPUT 'http://127.0.0.1:8000/api/v1/articles/1?tag_id=2&title=test-edit1
 ```shell
 curl -v -XDELETE 'http://127.0.0.1:8000/api/v1/articles/1'
 ```
+
+# user api test
+## get token
+```shell
+curl -v 'http://127.0.0.1:8000/auth?username=test&password=test123456'
+```
