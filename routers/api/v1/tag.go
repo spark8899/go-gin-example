@@ -1,7 +1,6 @@
 package v1
 
 import (
-    // "log"
     "net/http"
 
     "github.com/gin-gonic/gin"
@@ -12,6 +11,7 @@ import (
     "github.com/spark8899/go-gin-example/models"
     "github.com/spark8899/go-gin-example/pkg/util"
     "github.com/spark8899/go-gin-example/pkg/setting"
+    // "github.com/spark8899/go-gin-example/pkg/logging"
 )
 
 //获取多个文章标签

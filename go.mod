@@ -40,5 +40,6 @@ replace (
 	github.com/spark8899/go-gin-example/pkg/e => ./pkg/e
 	github.com/spark8899/go-gin-example/pkg/setting => ./pkg/setting
 	github.com/spark8899/go-gin-example/pkg/util => ./pkg/util
+	github.com/spark8899/go-gin-example/pkg/logging => ./pkg/logging
 	github.com/spark8899/go-gin-example/routers => ./routers
 )
