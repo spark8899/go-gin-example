@@ -12,6 +12,7 @@ require (
 )
 
 require (
+	github.com/fvbock/endless v0.0.0-20170109170031-447134032cb6 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
@@ -38,8 +39,8 @@ replace (
 	github.com/spark8899/go-gin-example/middleware/jwt => ./middleware/jwt
 	github.com/spark8899/go-gin-example/models => ./models
 	github.com/spark8899/go-gin-example/pkg/e => ./pkg/e
+	github.com/spark8899/go-gin-example/pkg/logging => ./pkg/logging
 	github.com/spark8899/go-gin-example/pkg/setting => ./pkg/setting
 	github.com/spark8899/go-gin-example/pkg/util => ./pkg/util
-	github.com/spark8899/go-gin-example/pkg/logging => ./pkg/logging
 	github.com/spark8899/go-gin-example/routers => ./routers
 )
