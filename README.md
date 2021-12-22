@@ -94,3 +94,20 @@ curl -v -XDELETE 'http://127.0.0.1:8000/api/v1/articles/1'
 ```shell
 curl -v 'http://127.0.0.1:8000/auth?username=test&password=test123456'
 ```
+
+# install swag
+## install swag cmd
+```
+go install github.com/swaggo/swag/cmd/swag@latest
+swag -v
+```
+
+## install gin-swagger
+```
+go get -u github.com/swaggo/gin-swagger
+go get -u github.com/swaggo/files
+go get -u github.com/alecthomas/template
+
+swag init
+```
+open http://127.0.0.1:8000/swagger/index.html
