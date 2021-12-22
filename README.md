@@ -111,3 +111,14 @@ go get -u github.com/alecthomas/template
 swag init
 ```
 open http://127.0.0.1:8000/swagger/index.html
+
+# build docker
+```
+docker pull mysql
+docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root1234 -d mysql
+
+docker build -t gin-blog-docker .
+docker run -p 8000:8000 gin-blog-docker
+
+docker run --link mysql:mysql -p 8000:8000 gin-blog-docker
+```
