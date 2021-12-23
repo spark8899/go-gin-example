@@ -9,7 +9,6 @@ require (
 	github.com/go-ini/ini v1.66.2
 	github.com/jinzhu/gorm v1.9.16
 	github.com/robfig/cron v1.2.0
-	github.com/swaggo/files v0.0.0-20210815190702-a29dd2bc99b2
 	github.com/swaggo/gin-swagger v1.3.3
 	github.com/swaggo/swag v1.7.6
 	github.com/unknwon/com v1.0.1
@@ -53,8 +52,10 @@ replace (
 	github.com/spark8899/go-gin-example/middleware/jwt => ./middleware/jwt
 	github.com/spark8899/go-gin-example/models => ./models
 	github.com/spark8899/go-gin-example/pkg/e => ./pkg/e
+	github.com/spark8899/go-gin-example/pkg/file => ./pkg/file
 	github.com/spark8899/go-gin-example/pkg/logging => ./pkg/logging
 	github.com/spark8899/go-gin-example/pkg/setting => ./pkg/setting
+	github.com/spark8899/go-gin-example/pkg/upload => ./pkg/upload
 	github.com/spark8899/go-gin-example/pkg/util => ./pkg/util
 	github.com/spark8899/go-gin-example/routers => ./routers
 )

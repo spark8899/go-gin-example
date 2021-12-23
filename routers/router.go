@@ -1,16 +1,18 @@
 package routers
 
 import (
-    "github.com/gin-gonic/gin"
-    ginSwagger "github.com/swaggo/gin-swagger"
-    "github.com/swaggo/files"
+    "net/http"
 
-    "github.com/spark8899/go-gin-example/routers/api"
-    "github.com/spark8899/go-gin-example/routers/api/v1"
-    "github.com/spark8899/go-gin-example/pkg/setting"
-    "github.com/spark8899/go-gin-example/middleware/jwt"
+    "github.com/gin-gonic/gin"
 
     _ "github.com/spark8899/go-gin-example/docs"
+    "github.com/swaggo/gin-swagger"
+    "github.com/swaggo/gin-swagger/swaggerFiles"
+
+    "github.com/spark8899/go-gin-example/middleware/jwt"
+    "github.com/spark8899/go-gin-example/pkg/upload"
+    "github.com/spark8899/go-gin-example/routers/api"
+    "github.com/spark8899/go-gin-example/routers/api/v1"
 )
 
 func InitRouter() *gin.Engine {
@@ -20,10 +22,11 @@ func InitRouter() *gin.Engine {
 
     r.Use(gin.Recovery())
 
-    gin.SetMode(setting.RunMode)
+    r.StaticFS("/upload/images", http.Dir(upload.GetImageFullPath()))
 
-    r.GET("/auth", api.GetAuth)
+    r.POST("/auth", api.GetAuth)
     r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+    r.POST("/upload", api.UploadImage)
 
     apiv1 := r.Group("/api/v1")
     apiv1.Use(jwt.JWT())
