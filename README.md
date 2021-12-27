@@ -92,7 +92,7 @@ curl -v -XDELETE 'http://127.0.0.1:8000/api/v1/articles/1'
 # user api test
 ## get token
 ```shell
-curl -v 'http://127.0.0.1:8000/auth?username=test&password=test123456'
+curl -v -XPOST 'http://127.0.0.1:8000/auth' -d 'username=test&password=test123456'
 ```
 
 # install swag
